@@ -5,7 +5,7 @@ import { templates, templateDetails } from "../data/siteContent";
 
 const defaultProfile = {
   personal: {
-    fullName: "Phanindra",
+    fullName: "Jordan Vale",
     role: "AI Full Stack Developer",
     tagline: "Building premium digital experiences for modern careers.",
     bio: "I build production-grade products with clear UX, clean architecture, and measurable impact.",

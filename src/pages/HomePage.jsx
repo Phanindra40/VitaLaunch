@@ -67,7 +67,7 @@ export default function HomePage() {
             <div className="preview-body">
               <div className="profile-circle"></div>
 
-              <h3>Phanindra</h3>
+              <h3>Jordan Vale</h3>
               <p>AI Full Stack Developer</p>
 
               <div className="tech-stack">

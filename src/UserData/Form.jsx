@@ -6,7 +6,7 @@ const STORAGE_KEY = "vitalaunch-portfolio-data";
 
 const initialPortfolioData = {
   personal: {
-    fullName: "Phanindra",
+    fullName: "Jordan Vale",
     role: "AI Full Stack Developer",
     tagline: "Building AI-powered web experiences",
     bio: "I build production-grade products with clear UX, clean architecture, and measurable impact.",
