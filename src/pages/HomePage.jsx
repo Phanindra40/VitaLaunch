@@ -61,7 +61,7 @@ export default function HomePage() {
               <span></span>
               <span></span>
               <span></span>
-              <p>VitaLaunch Studio</p>
+              <p>Studio</p>
             </div>
 
             <div className="preview-body">
