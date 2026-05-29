@@ -1,0 +1,202 @@
+.zenith {
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at top left, rgba(96, 165, 250, 0.16), transparent 28%),
+		radial-gradient(circle at top right, rgba(14, 165, 233, 0.12), transparent 24%),
+		linear-gradient(180deg, #020617 0%, #0f172a 100%);
+	color: #e2e8f0;
+	position: relative;
+	overflow: hidden;
+}
+
+.zenith::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+	background-size: 56px 56px;
+	opacity: 0.18;
+	pointer-events: none;
+}
+
+.zenith-container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 76px 28px 88px;
+	position: relative;
+	z-index: 1;
+}
+
+.zenith-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 56px;
+	padding: 18px 22px;
+	border-radius: 24px;
+	background: rgba(255, 255, 255, 0.78);
+	backdrop-filter: blur(16px);
+	background: rgba(15, 23, 42, 0.7);
+	border: 1px solid rgba(148, 163, 184, 0.18);
+	box-shadow: 0 16px 34px rgba(2, 6, 23, 0.24);
+}
+
+.zenith-nav h1 {
+	font-size: 1.25rem;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	color: #f8fafc;
+}
+
+.zenith-nav button {
+	border: 1px solid #cbd5e1;
+	background: linear-gradient(135deg, rgba(51, 65, 85, 0.92), rgba(15, 23, 42, 0.96));
+	color: #f8fafc;
+	border-radius: 999px;
+	padding: 12px 18px;
+	box-shadow: 0 8px 18px rgba(2, 6, 23, 0.2);
+	cursor: pointer;
+	font: inherit;
+	font-weight: 600;
+}
+
+.zenith-hero {
+	display: grid;
+	grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+	gap: 28px;
+	align-items: stretch;
+}
+
+.zenith-hero > div:first-child {
+	padding: 32px 8px 16px 4px;
+	max-width: 720px;
+}
+
+.zenith-label {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 18px;
+	padding: 9px 14px;
+	border-radius: 999px;
+	background: rgba(56, 189, 248, 0.12);
+	border: 1px solid rgba(56, 189, 248, 0.18);
+	color: #bae6fd;
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.zenith-heading {
+	font-size: clamp(3rem, 6vw, 5rem);
+	font-weight: 800;
+	line-height: 0.95;
+	margin-bottom: 16px;
+	letter-spacing: -0.04em;
+}
+
+.zenith-hero > div:first-child p {
+	font-size: 1.05rem;
+	max-width: 620px;
+	color: #cbd5e1;
+	line-height: 1.8;
+}
+
+.zenith-card {
+	background:
+		linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.96)),
+		#0f172a;
+	border-radius: 28px;
+	padding: 34px;
+	border: 1px solid rgba(148, 163, 184, 0.16);
+	box-shadow: 0 18px 40px rgba(2, 6, 23, 0.32);
+	align-self: start;
+	position: relative;
+	overflow: hidden;
+}
+
+.zenith-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 36%);
+	pointer-events: none;
+}
+
+.zenith-card > * {
+	position: relative;
+	z-index: 1;
+}
+
+.zenith-card h2 {
+	margin-bottom: 10px;
+	font-size: 1.45rem;
+	letter-spacing: -0.02em;
+	color: #f8fafc;
+}
+
+.zenith-card p {
+	color: #cbd5e1;
+	line-height: 1.8;
+	margin-bottom: 14px;
+}
+
+.zenith-card p:last-child {
+	margin-bottom: 0;
+}
+
+.zenith-card::after {
+	content: "Recruiter Ready";
+	display: inline-flex;
+	margin-top: 16px;
+	padding: 8px 12px;
+	border-radius: 999px;
+	background: rgba(56, 189, 248, 0.1);
+	border: 1px solid rgba(56, 189, 248, 0.18);
+	color: #bae6fd;
+	font-size: 0.76rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+@media (max-width: 960px) {
+	.zenith-container {
+		padding: 60px 20px 72px;
+	}
+
+	.zenith-nav,
+	.zenith-hero {
+		grid-template-columns: 1fr;
+		display: grid;
+	}
+
+	.zenith-nav {
+		justify-items: start;
+		margin-bottom: 40px;
+	}
+
+	.zenith-hero > div:first-child {
+		padding: 0;
+	}
+
+	.zenith-card {
+		padding: 28px;
+	}
+}
+
+@media (max-width: 640px) {
+	.zenith-heading {
+		font-size: clamp(2.5rem, 13vw, 3.5rem);
+	}
+
+	.zenith-card,
+	.zenith-nav {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+
+	.zenith-nav button {
+		width: 100%;
+	}
+}

@@ -1,0 +1,95 @@
+.pixelflow {
+	min-height: 100vh;
+	background: linear-gradient(135deg, #0f172a, #111827);
+	color: white;
+	overflow: hidden;
+}
+
+.pixel-navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 8%;
+}
+
+.pixel-navbar button {
+	border: none;
+	color: white;
+	padding: 12px 18px;
+	border-radius: 999px;
+	background: linear-gradient(135deg, #9333ea, #f43f5e);
+}
+
+.pixel-grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 24px;
+}
+
+.pixel-hero {
+	padding: 32px 8% 80px;
+}
+
+.pixel-card-large {
+	grid-column: span 7;
+	min-height: 300px;
+}
+
+.pixel-card-small {
+	grid-column: span 5;
+}
+
+.pixel-card {
+	border-radius: 28px;
+	overflow: hidden;
+	background: linear-gradient(135deg, #9333ea, #f43f5e);
+	position: relative;
+	padding: 32px;
+}
+
+.pixel-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 40%);
+}
+
+.pixel-card > * {
+	position: relative;
+	z-index: 1;
+}
+
+.pixel-label {
+	display: inline-block;
+	margin-bottom: 16px;
+	padding: 8px 12px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.16);
+}
+
+.pixel-card h2 {
+	font-size: clamp(2.3rem, 5vw, 4rem);
+	line-height: 1.02;
+	margin-bottom: 14px;
+}
+
+.pixel-card p {
+	max-width: 540px;
+	color: rgba(255, 255, 255, 0.9);
+	line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+	.pixel-card-large,
+	.pixel-card-small {
+		grid-column: span 12;
+	}
+}
+
+@media (max-width: 640px) {
+	.pixel-navbar {
+		flex-direction: column;
+		gap: 16px;
+		align-items: flex-start;
+	}
+}

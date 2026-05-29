@@ -1,0 +1,85 @@
+.neonforge {
+	min-height: 100vh;
+	background: #030712;
+	color: white;
+	overflow: hidden;
+}
+
+.neon-bg {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	opacity: 0.75;
+}
+
+.neon-grid {
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+	background-size: 40px 40px;
+}
+
+.neon-navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 8%;
+	position: relative;
+	z-index: 1;
+}
+
+.neon-navbar button {
+	background: rgba(168, 85, 247, 0.16);
+	color: #f8fafc;
+	border: 1px solid rgba(168, 85, 247, 0.4);
+	padding: 12px 18px;
+	border-radius: 999px;
+}
+
+.neon-hero {
+	min-height: 82vh;
+	display: grid;
+	place-items: center;
+	padding: 48px 8% 80px;
+	position: relative;
+	z-index: 1;
+}
+
+.neon-card {
+	width: min(100%, 680px);
+	padding: 44px;
+	border: 1px solid rgba(168, 85, 247, 0.4);
+	box-shadow:
+		0 0 20px rgba(168, 85, 247, 0.3),
+		0 0 60px rgba(59, 130, 246, 0.15);
+	border-radius: 28px;
+	background: rgba(255, 255, 255, 0.03);
+	backdrop-filter: blur(18px);
+}
+
+.neon-text {
+	color: #c084fc;
+	text-shadow: 0 0 12px rgba(192, 132, 252, 0.8);
+	font-size: clamp(2.8rem, 7vw, 5rem);
+	line-height: 0.95;
+	margin-bottom: 12px;
+}
+
+.neon-card p {
+	color: rgba(248, 250, 252, 0.8);
+	font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+	.neon-navbar,
+	.neon-card {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.neon-navbar {
+		flex-direction: column;
+		gap: 16px;
+		align-items: flex-start;
+	}
+}

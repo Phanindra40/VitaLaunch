@@ -1,0 +1,92 @@
+.glassedge {
+	min-height: 100vh;
+	color: #f8fafc;
+	background:
+		radial-gradient(circle at top left, rgba(147, 51, 234, 0.25), transparent 30%),
+		radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.25), transparent 30%),
+		#020617;
+	position: relative;
+	overflow: hidden;
+}
+
+.glass-navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 8%;
+}
+
+.glass-navbar button {
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	color: #fff;
+	padding: 12px 18px;
+	border-radius: 999px;
+	backdrop-filter: blur(16px);
+}
+
+.glass-hero {
+	min-height: 82vh;
+	padding: 40px 8% 72px;
+	display: grid;
+	grid-template-columns: minmax(280px, 1.2fr) minmax(240px, 0.8fr);
+	gap: 24px;
+	align-items: center;
+}
+
+.glass-card,
+.glass-floating-panel {
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(24px);
+	border-radius: 28px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.glass-profile-card {
+	padding: 34px;
+	max-width: 560px;
+}
+
+.glass-kicker {
+	display: inline-block;
+	padding: 8px 14px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.1);
+	margin-bottom: 18px;
+}
+
+.glass-profile-card h2 {
+	font-size: clamp(2.3rem, 6vw, 4.6rem);
+	line-height: 1;
+	margin-bottom: 18px;
+}
+
+.glass-profile-card p,
+.glass-floating-panel p {
+	color: rgba(248, 250, 252, 0.82);
+	line-height: 1.7;
+}
+
+.glass-floating-panel {
+	padding: 24px;
+	min-height: 180px;
+	align-self: end;
+}
+
+.glass-floating-panel.small {
+	max-width: 320px;
+	justify-self: end;
+	margin-top: -40px;
+}
+
+@media (max-width: 860px) {
+	.glass-hero {
+		grid-template-columns: 1fr;
+	}
+
+	.glass-floating-panel.small {
+		justify-self: start;
+		margin-top: 0;
+	}
+}

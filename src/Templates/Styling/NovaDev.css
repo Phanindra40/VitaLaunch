@@ -1,0 +1,159 @@
+.novadev {
+	min-height: 100vh;
+	background: #020617;
+	color: white;
+	font-family: Inter, sans-serif;
+	overflow: hidden;
+	position: relative;
+}
+
+.nova-glow {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(120px);
+}
+
+.nova-glow-1 {
+	width: 300px;
+	height: 300px;
+	background: rgba(124, 58, 237, 0.25);
+	top: 0;
+	left: -100px;
+}
+
+.nova-glow-2 {
+	width: 350px;
+	height: 350px;
+	background: rgba(59, 130, 246, 0.18);
+	right: -100px;
+	top: 200px;
+}
+
+.nova-navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 8%;
+}
+
+.nova-navbar button {
+	background: linear-gradient(90deg, #3b82f6, #9333ea);
+	border: none;
+	padding: 12px 20px;
+	border-radius: 999px;
+	color: white;
+}
+
+.nova-hero {
+	min-height: 90vh;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	align-items: center;
+	padding: 0 8%;
+	gap: 60px;
+}
+
+.nova-badge {
+	background: rgba(124, 58, 237, 0.15);
+	padding: 12px 18px;
+	border-radius: 999px;
+	color: #c4b5fd;
+}
+
+.nova-left h1 {
+	font-size: 5rem;
+	margin: 30px 0;
+	line-height: 1.05;
+}
+
+.nova-left h1 span {
+	background: linear-gradient(90deg, #3b82f6, #9333ea);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.nova-left p {
+	color: #94a3b8;
+	line-height: 1.8;
+	max-width: 600px;
+}
+
+.nova-buttons {
+	display: flex;
+	gap: 20px;
+	margin-top: 40px;
+}
+
+.primary,
+.secondary {
+	padding: 16px 24px;
+	border-radius: 16px;
+	border: none;
+}
+
+.primary {
+	background: linear-gradient(90deg, #3b82f6, #9333ea);
+	color: white;
+}
+
+.secondary {
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	color: white;
+}
+
+.nova-card {
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(20px);
+	padding: 40px;
+	border-radius: 28px;
+	text-align: center;
+}
+
+.nova-meta {
+	display: block;
+	margin-top: 8px;
+	color: #94a3b8;
+	font-size: 0.9rem;
+}
+
+.profile-ring {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: linear-gradient(90deg, #3b82f6, #9333ea);
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.skill-grid {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 24px;
+}
+
+.skill-grid span {
+	background: rgba(124, 58, 237, 0.12);
+	padding: 10px 16px;
+	border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+	.nova-navbar,
+	.nova-hero {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.nova-left h1 {
+		font-size: clamp(3rem, 14vw, 5rem);
+	}
+
+	.nova-buttons {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
