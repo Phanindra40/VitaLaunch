@@ -27,6 +27,7 @@ function normalizeUrl(url) {
 
 export default function PortfolioTemplateShell({ templateLabel, templateTone, templateDescription, profile, portfolioData, themeClass }) {
   const personal = profile ?? portfolioData?.personal ?? {};
+  const profileImage = personal.profileImage?.trim() ?? "";
   const skills = portfolioData?.skills ?? [];
   const socials = portfolioData?.socials ?? {};
   const heroPanelRef = useRef(null);
@@ -149,7 +150,11 @@ export default function PortfolioTemplateShell({ templateLabel, templateTone, te
 
           <div className="portfolio-profile-card">
             <div className="portfolio-profile-avatar">
-              {personal.fullName ? personal.fullName.charAt(0) : "Y"}
+              {profileImage ? (
+                <img src={profileImage} alt={personal.fullName ?? "Profile photo"} />
+              ) : (
+                personal.fullName ? personal.fullName.charAt(0) : "Y"
+              )}
             </div>
             <div>
               <h3>{personal.fullName ?? personal.name ?? "Your Name"}</h3>
